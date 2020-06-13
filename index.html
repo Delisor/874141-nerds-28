@@ -3,11 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Нёрдс</title>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU" type="text/javascript"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+
     </head>
     <body>
         <header>
-            <a href="">
-                <img src="https://via.placeholder.com/150x100" alt="logo">
+            <a href="/">
+                <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс Магазин готовых шаблонов">
             </a>
             <nav>
                 <ul>
@@ -17,7 +21,7 @@
                     <li><a href="">Контакты</a></li>
                 </ul>
                 <ul>
-                  <li><a href=""><img src="https://via.placeholder.com/150x100">Корзина</a></li>
+                    <li><a href=""><img src="img/svg/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a></li>
                 </ul>
             </nav>
         </header>
@@ -26,37 +30,30 @@
             <section>  <!--Для данного тега будет прописан background-image -->
                 <h1>Дорого, дорого, скрупулезно.</h1>
                 <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-                <button type="button">Узнать больше</button>
+                <a href="catalog.html"></a>
             </section>
             <!--Блок банер конец -->
 
             <!--Блок услуги начало -->
             <section>
                 <ul>
-                    <li>
+                    <li class="services-item web-sites">
                         <!--Лого блока Вэб-сайты будет реализовано средствами css псевдоэлментом before-->
-                        <div>
-                            <h3>Вэб-сайты</h3>
-                            <p>Мир никогда не будет прежним после того как увидит ваш сайт</p>
-                            <button type="button">Заказать</button>
-                        </div>
-
+                        <h3>Вэб-сайты</h3>
+                        <p>Мир никогда не будет прежним после того как увидит ваш сайт</p>
+                        <button type="button">Заказать</button>
                     </li>
-                    <li>
+                    <li class="services-item apps">
                         <!--Лого блока Приложения будет реализовано средствами css псевдоэлментом before-->
-                        <div>
-                            <h3>Приложения</h3>
-                            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-                            <button type="button">Заказать</button>
-                        </div>
+                        <h3>Приложения</h3>
+                        <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+                        <button type="button">Заказать</button>
                     </li>
-                    <li>
+                    <li class="services-item presentations">
                         <!--Лого блока Презентации будет реализовано средствами css псевдоэлментом before-->
-                        <div>
-                            <h3>Презентации</h3>
-                            <p>Вы даже не подозреваете насколько вы изумительны</p>
-                            <button type="button">Заказать</button>
-                        </div>
+                        <h3>Презентации</h3>
+                        <p>Вы даже не подозреваете насколько вы изумительны</p>
+                        <button type="button">Заказать</button>
                     </li>
                 </ul>
             </section>
@@ -75,7 +72,7 @@
                     </ul>
                 </div>
                 <div>   <!--Правый блок-->
-                    <img src="img/nerds-illustration%201.png">
+                    <img src="img/nerds-illustration%201.png" width="360" height="208" alt="Картинка проекта Nerds">
                     <p>C 2004 года любим точность во всем:</p>
                     <ul>
                         <li>
@@ -98,18 +95,18 @@
             <!--Блок проектов начало -->
             <section>
                 <ul>
-                    <li><svg></svg></li>
-                    <li><svg></svg></li>
-                    <li><svg></svg></li>
-                    <li><svg></svg></li>
+                    <li><img src="img/svg/logo-5.svg" width="199" height="68" alt="HTML academy картинка ссылка"></li>
+                    <li><img src="img/svg/logo-2.svg" width="209" height="90" alt="Borodinski барбершоп проект картинка ссылка"></li>
+                    <li><img src="img/svg/logo-3.svg" width="185" height="52" alt="Pink проект картинка ссылка"></li>
+                    <li><img src="img/svg/logo-4.svg" width="173" height="84" alt="Mishka проект картинка ссылка"></li>
                 </ul>
             </section>
             <!--Блок проектов конец -->
 
             <!--Блок карты начало -->
             <section>
-                <iframe></iframe> <!--фрейм карты-->
-                <div>       <!--блок с позицией absolute-->
+                <div id="YMapsID" class="map-conteiner"></div> <!--фрейм карты-->
+                <div class="popup-map">       <!--блок с позицией absolute-->
                     <h3>NЁRDS DESIGN STUDIO</h3>
                     <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7(812)275-75-75</p>
                     <button type="button">Напишите нам</button>
@@ -120,18 +117,18 @@
         <footer>
             <ul>
                 <li>
-                    <a href="" target="_blank" title="">
-                        <svg><path></path></svg>
+                    <a href="" target="_blank" title="vk">
+                        <img src="img/svg/vk-icon.svg" width="26" height="15" alt="vkontakte">
                     </a>
                 </li>
                 <li>
-                    <a href="" target="_blank" title="">
-                        <svg><path></path></svg>
+                    <a href="" target="_blank" title="facebook">
+                        <img src="img/svg/fb-icon.svg" width="12" height="22" alt="facebook">
                     </a>
                 </li>
                 <li>
-                    <a href="" target="_blank" title="">
-                        <svg><path></path></svg>
+                    <a href="" target="_blank" title="instagram">
+                        <img src="img/svg/insta-icon.svg" width="21" height="21" alt="instagram">
                     </a>
                 </li>
             </ul>

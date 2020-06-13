@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Нёрдс Магазин готовых шаблонов</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <a href="">
-            <img src="https://via.placeholder.com/150x100" alt="logo">
+        <a href="/">
+            <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс Магазин готовых шаблонов">
         </a>
         <nav>
             <ul>
@@ -17,7 +20,7 @@
                 <li><a href="">Контакты</a></li>
             </ul>
             <ul>
-                <li><a href=""><img src="https://via.placeholder.com/150x100">Корзина</a></li>
+                <li><a href=""><img src="img/svg/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a></li>
             </ul>
         </nav>
     </header>
@@ -28,16 +31,15 @@
         </section>
         <!--Блок заголвок страницы конец -->
 
-        <section>
+        <main>
             <aside>
                 <form>
                     <div>
-                        <h3>Розничная цена</h3>
                         <div></div><!--блок ползунка-->
                         <span>ОТ</span>
-                        <input type="text" name="MIN_PRICE">
-                        <span>До</span>
-                        <input type="text" name="MAX_PRICE">
+                        <input type="text" name="min_price">
+                        <span>ДО</span>
+                        <input type="text" name="max_price">
                     </div>
 
                     <div>
@@ -101,8 +103,8 @@
                     <!--Листинг проектов начало-->
                     <ul>
                         <li>
-                            <div></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="https://via.placeholder.com/150x100">
+                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
+                            <img src="img/img-sedona.png" width="360px" height="576" alt="sedona">
 
                             <div>       <!--Блок с дисплей = None -->
                                 <h3>SEDONA</h3>
@@ -112,25 +114,25 @@
 
                         </li>
                         <li>
-                            <div></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="https://via.placeholder.com/150x100">
+                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
+                            <img src="img/img-pink.png" width="360px" height="576" alt="pink">
 
                         </li>
                         <li>
-                            <div></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="https://via.placeholder.com/150x100">
+                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
+                            <img src="img/img-barbershop.png" width="358" height="578" alt="barbershop">
                         </li>
                         <li>
-                            <div></div>
-                            <img src="https://via.placeholder.com/150x100">
+                            <div class="project-item-controls"></div>
+                            <img src="img/img-mishka.png" width="358" height="578" alt="mishka">
                         </li>
                         <li>
-                            <div></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="https://via.placeholder.com/150x100">
+                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
+                            <img src="img/img-aplus.png" width="358" height="578" alt="aplus">
                         </li>
                         <li>
-                            <div></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="https://via.placeholder.com/150x100">
+                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
+                            <img src="img/img-kvast.png" width="358" height="578" alt="kvast">
                         </li>
                     </ul>
                     <!--Листинг проектов конец-->
@@ -145,11 +147,11 @@
                     </div>
                     <!--Пагинация конец-->
             </section>
-        </section>
+        </main>
         <!--Блок карты начало -->
         <section>
-            <iframe></iframe> <!--фрейм карты-->
-            <div>       <!--блок с позицией absolute-->
+            <div id="YMapsID" class="map-conteiner"></div> <!--фрейм карты-->
+            <div class="popup-map">       <!--блок с позицией absolute-->
                 <h3>NЁRDS DESIGN STUDIO</h3>
                 <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7(812)275-75-75</p>
                 <button type="button">Напишите нам</button>
@@ -160,18 +162,18 @@
     <footer>
         <ul>
             <li>
-                <a href="" target="_blank" title="">
-                    <svg><path></path></svg>
+                <a href="" target="_blank" title="vk">
+                    <img src="img/svg/vk-icon.svg" width="26" height="15" alt="vkontakte">
                 </a>
             </li>
             <li>
-                <a href="" target="_blank" title="">
-                    <svg><path></path></svg>
+                <a href="" target="_blank" title="facebook">
+                    <img src="img/svg/fb-icon.svg" width="12" height="22" alt="facebook">
                 </a>
             </li>
             <li>
-                <a href="" target="_blank" title="">
-                    <svg><path></path></svg>
+                <a href="" target="_blank" title="instagram">
+                    <img src="img/svg/insta-icon.svg" width="21" height="21" alt="instagram">
                 </a>
             </li>
         </ul>
