@@ -5,36 +5,41 @@
     <title>HTML Academy: Нёрдс Магазин готовых шаблонов</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <a href="/">
-            <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс Магазин готовых шаблонов">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="">Студия</a></li>
-                <li><a href="">Клиенты</a></li>
-                <li><a href="">Магазин</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-            <ul>
-                <li><a href=""><img src="img/svg/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a></li>
-            </ul>
-        </nav>
+        <div class="page-header">
+            <h1 class="sr-only">NЁRDS DESIGN STUDIO</h1>
+            <nav class="page-header__inner">
+                <a href="/">
+                    <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс Магазин готовых шаблонов">
+                </a>
+
+                <ul class="site-menu">
+                    <li><a href="">Студия</a></li>
+                    <li><a href="">Клиенты</a></li>
+                    <li><a href="">Магазин</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+                <ul class="basket-block">
+                    <li><a href=""><img src="img/svg/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <!--Блок заголвок страницы начало -->
-        <section>
+        <section class="sec-head-title">
             <h1>Магазин готовых шаблонов</h1>
         </section>
         <!--Блок заголвок страницы конец -->
 
-        <main>
+        <section class="sec-main-part">
             <aside>
                 <form>
-                    <div>
+                    <div class="price-filter">
                         <div></div><!--блок ползунка-->
                         <span>ОТ</span>
                         <input type="text" name="min_price">
@@ -42,7 +47,7 @@
                         <input type="text" name="max_price">
                     </div>
 
-                    <div>
+                    <div class="choose-grid">
                         <h3>Сетка:</h3>
                         <div>
                             <input type="radio" id="radio_adaptive" name="grid" value="adaptive">
@@ -56,33 +61,51 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="features">
                         <h3>Особенности:</h3>
-                        <div>
-                            <input type="checkbox" id="slider" name="features">
-                            <label for="slider">Слайдер</label>
+                        <div class="features-inner">
+                            <label for="slider">
+                                <input type="checkbox" id="slider" name="features">
+                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
+                                Слайдер
+                            </label>
 
-                            <input type="checkbox" id="benefits" name="features">
-                            <label for="benefits">Блок преимуществ</label>
 
-                            <input type="checkbox" id="news" name="features">
-                            <label for="news">Новости</label>
+                            <label for="benefits">
+                                <input type="checkbox" id="benefits" name="features">
+                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
+                                Блок преимуществ
+                            </label>
 
-                            <input type="checkbox" id="gallery" name="features">
-                            <label for="gallery">Галерея</label>
 
-                            <input type="checkbox" id="basket" name="features">
-                            <label for="basket">Корзина</label>
+                            <label for="news">
+                                <input type="checkbox" id="news" name="features">
+                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
+                                Новости
+                            </label>
+
+
+                            <label for="gallery">
+                                <input type="checkbox" id="gallery" name="features">
+                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
+                                Галерея
+                            </label>
+
+
+                            <label for="basket">
+                                <input type="checkbox" id="basket" name="features">
+                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
+                                Корзина
+                            </label>
 
                         </div>
                     </div>
 
                     <div>
-                        <button type="button">Показать</button>
+                        <button type="button" class="btn-submit btn-grey">Показать</button>
                     </div>
                 </form>
             </aside>
-
             <section>
                     <!--Сортировка начало-->
                     <div>
@@ -137,7 +160,7 @@
                     </ul>
                     <!--Листинг проектов конец-->
                     <!--Пагинация начало-->
-                    <div>
+                    <div class="pagination">
                         <ul>
                             <li>1</li>
                             <li>2</li>
@@ -147,39 +170,44 @@
                     </div>
                     <!--Пагинация конец-->
             </section>
-        </main>
+        </section>
         <!--Блок карты начало -->
-        <section>
+        <section class="sec-map">
             <div id="YMapsID" class="map-conteiner"></div> <!--фрейм карты-->
             <div class="popup-map">       <!--блок с позицией absolute-->
                 <h3>NЁRDS DESIGN STUDIO</h3>
                 <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7(812)275-75-75</p>
-                <button type="button">Напишите нам</button>
+                <button type="button" class="btn btn-red btn-right-us">Напишите нам</button>
             </div>
         </section>
         <!--Блок карты конец -->
     </main>
     <footer>
-        <ul>
-            <li>
-                <a href="" target="_blank" title="vk">
-                    <img src="img/svg/vk-icon.svg" width="26" height="15" alt="vkontakte">
-                </a>
-            </li>
-            <li>
-                <a href="" target="_blank" title="facebook">
-                    <img src="img/svg/fb-icon.svg" width="12" height="22" alt="facebook">
-                </a>
-            </li>
-            <li>
-                <a href="" target="_blank" title="instagram">
-                    <img src="img/svg/insta-icon.svg" width="21" height="21" alt="instagram">
-                </a>
-            </li>
-        </ul>
-        <div>
-            <h2>Давайте дружить, это выгодно</h2>
-            <p>Скидка 10% для друзей из социальных сетей</p>
+        <div class="page-footer__inner">
+            <ul>
+                <li>
+                    <a href="" target="_blank" title="vk" class="vk-icon">
+                        <span class="sr-only">Наша страница в&nbsp;Vk</span>
+                        <img src="img/vk-icon.png" width="26" height="15" alt="vkontakte">
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank" title="facebook" class="fb-icon">
+                        <span class="sr-only">Наша страница в&nbsp;Facebook</span>
+                        <img src="img/fb-icon.png" width="12" height="22" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank" title="Instagram" class="insta-icon">
+                        <span class="sr-only">Наша страница в&nbsp;Instagram</span>
+                        <img src="img/insta-icon.png" width="21" height="21" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+            <div class="page-footer__inner_text">
+                <h2>Давайте дружить, это выгодно</h2>
+                <p>Скидка 10% для друзей из социальных сетей</p>
+            </div>
         </div>
     </footer>
 </body>
