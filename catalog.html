@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Нёрдс Магазин готовых шаблонов</title>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,6 +41,7 @@
             <aside>
                 <form>
                     <div class="price-filter">
+                        <h3>Стоимость:</h3>
                         <div></div><!--блок ползунка-->
                         <span>ОТ</span>
                         <input type="text" name="min_price">
@@ -108,23 +110,20 @@
             </aside>
             <section>
                     <!--Сортировка начало-->
-                    <div>
+                    <div class="sort-container">
                         <h3>Сортировать:</h3>
-                        <div>
+                        <div class="sort-container-inner">
                             <a href=""><span>По цене</span></a>
                             <a href=""><span>По типу</span></a>
                             <a href=""><span>По названию</span></a>
-                            <a href="">
-                                <i title="По взрастанию"></i>
-                            </a>
-                            <a href="">
-                                <i title="По убыванию"></i>
-                            </a>
+                            <button class="sort-down" type="button"></button>
+                            <button class="sort-up" type="button"></button>
                         </div>
                     </div>
                     <!--Сортировка конец-->
                     <!--Листинг проектов начало-->
-                    <ul>
+
+                    <ul class="">
                         <li>
                             <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
                             <img src="img/img-sedona.png" width="360px" height="576" alt="sedona">
@@ -162,10 +161,10 @@
                     <!--Пагинация начало-->
                     <div class="pagination">
                         <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>Следующая</li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li class="next-page"><a href="">Следующая</a></li>
                         </ul>
                     </div>
                     <!--Пагинация конец-->

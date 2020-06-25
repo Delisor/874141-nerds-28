@@ -1,11 +1,10 @@
-
+/*Common*/
 *, *:before, *:after {
     box-sizing: border-box;
 }
 html{
     height: 100%;
 }
-
 body{
     font-family: 'Roboto', sans-serif;
     min-height: 100%;
@@ -18,7 +17,6 @@ body{
     padding: 0;
     margin: 0;
 }
-
 body hr{
     height: 2px;
     background-colot: #EEEEEE;
@@ -26,7 +24,10 @@ body hr{
     max-width: 1158px;
     margin: 0 auto;
 }
+/*Common END*/
 
+
+/*Header*/
 body header {
     display: flex;
     flex-direction: row;
@@ -40,17 +41,25 @@ body header nav ul {
     display: flex;
     flex-direction: row;
 }
+header ul {
+    list-style: none;
+}
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0,0,0,0);
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
+header ul li a{
+    line-height: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+}
+
+header .page-header__inner .site-menu{
+    width: 438px;
+    justify-content: space-between;
+}
+
+header .page-header__inner .basket-block li a img{
+    margin-right: 25px;
 }
 
 .page-header__inner{
@@ -59,7 +68,6 @@ body header nav ul {
     justify-content: space-between;
     padding-top: 49px;
 }
-
 .page-header{
     display: block;
     width: 100%;
@@ -68,18 +76,10 @@ body header nav ul {
     padding-right: 140px;
     padding-left: 140px;
 }
-.apps:before{
-    background-image: url(../img/illustration-3.png);
-}
+/*Header END*/
 
-.presentations:before{
-    background-image: url(../img/illustration-2.png);
-}
 
-.web-sites:before{
-    background-image: url(../img/illustration-1.png);
-}
-
+/*Our services*/
 .sec-our-services {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -98,18 +98,15 @@ body header nav ul {
     margin: 0;
     list-style: none;
 }
-
 .sec-our-services ul li:before{
     width: 300px;
     height: 146px;
     content: "";
     display: block;
 }
-
 .sec-our-services ul li{
     width: 300px;
 }
-
 .sec-our-services ul li h3{
     font-size: 24px;
     line-height: 30px;
@@ -118,17 +115,22 @@ body header nav ul {
     margin-top: 25px;
     margin-bottom: 16px;
 }
-
 .sec-our-services ul li p{
 
     margin-bottom: 32px;
 }
-
-.map-conteiner{
-    width: 100%;
-    height: 416px;
+.apps:before{
+    background-image: url(../img/illustration-3.png);
 }
+.presentations:before{
+    background-image: url(../img/illustration-2.png);
+}
+.web-sites:before{
+    background-image: url(../img/illustration-1.png);
+}
+/*Our services END*/
 
+/*Buttons*/
 .btn{
     width: 160px;
     height: 50px;
@@ -142,7 +144,6 @@ body header nav ul {
     font-style: normal;
     color: #FFFFFF;
 }
-
 .btn-submit{
     width: 260px;
     border-radius: 3px;
@@ -151,33 +152,30 @@ body header nav ul {
     border: none;
     height: 50px;
 }
-
 .btn-red{
     background-color: #FB565A;
 }
-
 .btn-green{
     background-color: #00CA74;
 }
-
 .btn-yellow{
     background-color: #EFC849;
 }
 .btn-grey{
     background-color: #EEEEEE;
 }
-
 btn-right-us{
     width: 219px;
 }
-
 .btn-know-more{
     display: block;
     width: 240px;
     line-height: 50px;
     text-decoration: none;
 }
+/*Buttons END*/
 
+/*Projects-links*/
 .sec-projects-links{
     padding-left: 172px;
     padding-right: 183px;
@@ -187,7 +185,6 @@ btn-right-us{
     margin: 0 auto;
     width: 100%;
 }
-
 .sec-projects-links ul{
     max-width: 1085px;
     padding: 0;
@@ -198,14 +195,15 @@ btn-right-us{
     align-items: center;
     justify-content: space-between;
 }
-
 .sec-projects-links ul .separator{
     display: block;
     width: 2px;
     height: 52px;
     background-color: #EEEEEE;
 }
+/*Projects-links END*/
 
+/*What we are*/
 .sec-what-we-are{
     display: flex;
     flex-direction: row;
@@ -252,16 +250,13 @@ btn-right-us{
     font-weight: bold;
     padding-left: 7px;
 }
-
 .sec-what-we-are .left-block-info h3{
     margin-bottom: 23px;
 }
-
 .sec-what-we-are .left-block-info ul{
     max-width: 431px;
     padding: 0;
 }
-
 .sec-what-we-are .left-block-info ul li {
     background: url('../img/Rectangle.png') no-repeat left;
     padding-left: 37px;
@@ -277,7 +272,6 @@ btn-right-us{
     width: 651px;
     height: 91px;
 }
-
 .sec-what-we-are .left-block-info p{
     font-size: 16px;
     line-height: 24px;
@@ -286,14 +280,13 @@ btn-right-us{
     width: 646px;
     height: 49px;
 }
+/*What we are END*/
 
-
-
+/*Main banner*/
 .sec-main-banner{
     height: 431px;
     background-color: #EEEEEE;
 }
-
 .sec-main-banner .start-home__top{
     display: flex;
     max-width: 1157px;
@@ -304,8 +297,6 @@ btn-right-us{
     padding-top: 78px;
     padding-bottom: 80px;
 }
-
-
 .sec-main-banner .start-home__top .start-home__message h1{
     font-size: 55px;
     line-height: 55px;
@@ -318,34 +309,17 @@ btn-right-us{
     margin-top: 25px;
     margin-bottom: 38px;
 }
+/*Main banner END*/
 
-header ul {
-list-style: none;
+/*map*/
+.map-conteiner{
+    width: 100%;
+    height: 416px;
 }
-
-header ul li a{
-    line-height: 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-}
-
-header .page-header__inner .site-menu{
-    width: 438px;
-    justify-content: space-between;
-}
-
-header .page-header__inner .basket-block li a img{
-    margin-right: 25px;
-}
-
-
 .sec-map {
     margin-top: 80px;
     position: relative;
 }
-
 .sec-map .popup-map {
     top: 54px;
     left: 140px;
@@ -369,7 +343,10 @@ header .page-header__inner .basket-block li a img{
     margin-top: 23px;
     margin-bottom: 37px;
 }
+/*map END*/
 
+
+/*Footer*/
 footer .page-footer__inner{
     width: 100%;
     max-width: 1440px;
@@ -384,7 +361,7 @@ footer .page-footer__inner{
 }
 
 footer .page-footer__inner .page-footer__inner_text{
-   max-width: 660px;
+    max-width: 660px;
 }
 
 footer .page-footer__inner .page-footer__inner_text h2{
@@ -407,7 +384,7 @@ footer .page-footer__inner ul li{
     margin-right: 9px;
     background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
     border-radius: 50%;
- }
+}
 
 footer .page-footer__inner ul .insta-icon{
     padding: 30px;
@@ -421,7 +398,11 @@ footer .page-footer__inner ul .fb-icon{
 footer .page-footer__inner ul li a {
     position: absolute;
 }
+/*Footer END*/
 
+
+
+/*Head title*/
 .sec-head-title{
     background-color: #EEEEEE;
     padding-bottom: 108px;
@@ -433,12 +414,50 @@ footer .page-footer__inner ul li a {
     font-size: 55px;
     line-height: 55px;
 }
+/*Head title END*/
+
+/*Catalog main part*/
+.sec-main-part{
+    padding-right: 140px;
+    padding-left: 140px;
+    display: flex;
+    flex-direction: row;
+}
 .sec-main-part aside{
     max-width: 260px;
 }
 .sec-main-part section{
     max-width: 760px;
+    width: 100%;
+    margin-left: 140px ;
 }
+
+.sec-main-part section ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+.sec-main-part section .sort-container{
+    padding-top: 55px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sec-main-part section .sort-container h3{
+    padding: 0;
+    margin: 0;
+}
+
+.sec-main-part section .sort-container .sort-container-inner .sort-down{
+
+}
+.sec-main-part section .sort-container .sort-container-inner .sort-up{
+
+}
+
 .sec-main-part aside form .features {
     line-height: 19px;
     color: #283136;
@@ -461,4 +480,45 @@ footer .page-footer__inner ul li a {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
     opacity: .6;
+}
+
+.sec-main-part section .pagination ul {
+    padding: 0;
+    margin: 0;
+}
+.sec-main-part section .pagination ul li a{
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 18px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.sec-main-part section .pagination ul li {
+    text-align: center;
+    background: #EEEEEE;
+    border-radius: 3px;
+    border: 0;
+}
+.sec-main-part section .pagination ul li:not(.next-page){
+    height: 50px;
+    width: 50px;
+    margin-right: 11px;
+}
+.sec-main-part section .pagination ul .next-page{
+    width: 260px;
+}
+/*Catalog main part END*/
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0,0,0,0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
 }
