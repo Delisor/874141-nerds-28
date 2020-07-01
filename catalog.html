@@ -21,7 +21,7 @@
                 <ul class="site-menu">
                     <li><a href="">Студия</a></li>
                     <li><a href="">Клиенты</a></li>
-                    <li><a href="">Магазин</a></li>
+                    <li><a class="active" href="">Магазин</a></li>
                     <li><a href="">Контакты</a></li>
                 </ul>
                 <ul class="basket-block">
@@ -38,137 +38,238 @@
         <!--Блок заголвок страницы конец -->
 
         <section class="sec-main-part">
-            <aside>
-                <form>
-                    <div class="price-filter">
-                        <h3>Стоимость:</h3>
-                        <div></div><!--блок ползунка-->
-                        <span>ОТ</span>
-                        <input type="text" name="min_price">
-                        <span>ДО</span>
-                        <input type="text" name="max_price">
-                    </div>
 
-                    <div class="choose-grid">
-                        <h3>Сетка:</h3>
-                        <div>
-                            <input type="radio" id="radio_adaptive" name="grid" value="adaptive">
-                            <label for="radio_adaptive">Адаптиваная</label>
+                <aside>
+                    <form action="https:://echo.htmlacademy.ru" method="get">
 
-                            <input type="radio" id="radio_fixed" name="grid" value="fixed">
-                            <label for="radio_fixed">Фиксированная</label>
+                        <fieldset class="filter-price">
+                            <legend>
+                                Стоимость:
+                            </legend>
+                            <div class="range-filter">
+                                <div class="range-contols">
+                                    <div class="scale">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="toggle toggle-min" tabindex="0"></div>
+                                    <div class="toggle toggle-max" tabindex="0"></div>
+                                </div>
+                                    <div class="price-controls">
+                                        <label class="min-price">
+                                            от   <input type="number" name="min_price">
+                                        </label>
+                                        <label class="max-price">
+                                            до  <input type="number" name="max_price">
+                                        </label>
 
-                            <input type="radio" id="radio_rubber" name="grid" value="rubber">
-                            <label for="radio_rubber">Резинованная</label>
-                        </div>
-                    </div>
-
-                    <div class="features">
-                        <h3>Особенности:</h3>
-                        <div class="features-inner">
-                            <label for="slider">
-                                <input type="checkbox" id="slider" name="features">
-                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
-                                Слайдер
-                            </label>
-
-
-                            <label for="benefits">
-                                <input type="checkbox" id="benefits" name="features">
-                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
-                                Блок преимуществ
-                            </label>
-
-
-                            <label for="news">
-                                <input type="checkbox" id="news" name="features">
-                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
-                                Новости
-                            </label>
-
-
-                            <label for="gallery">
-                                <input type="checkbox" id="gallery" name="features">
-                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
-                                Галерея
-                            </label>
-
-
-                            <label for="basket">
-                                <input type="checkbox" id="basket" name="features">
-                                <div class="t-checkbox__indicator" style="border-color:#ffffff;"></div>
-                                Корзина
-                            </label>
-
-                        </div>
-                    </div>
-
-                    <div>
-                        <button type="button" class="btn-submit btn-grey">Показать</button>
-                    </div>
-                </form>
-            </aside>
-            <section>
-                    <!--Сортировка начало-->
-                    <div class="sort-container">
-                        <h3>Сортировать:</h3>
-                        <div class="sort-container-inner">
-                            <a href=""><span>По цене</span></a>
-                            <a href=""><span>По типу</span></a>
-                            <a href=""><span>По названию</span></a>
-                            <button class="sort-down" type="button"></button>
-                            <button class="sort-up" type="button"></button>
-                        </div>
-                    </div>
-                    <!--Сортировка конец-->
-                    <!--Листинг проектов начало-->
-
-                    <ul class="">
-                        <li>
-                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="img/img-sedona.png" width="360px" height="576" alt="sedona">
-
-                            <div>       <!--Блок с дисплей = None -->
-                                <h3>SEDONA</h3>
-                                <p>Информационный сайт для туристов</p>
-                                <button type="button">9900 &#x20BD;</button>
+                                    </div>
                             </div>
+                        </fieldset>
+                        <fieldset class="choose-grid">
+                            <legend>
+                                Сетка:
+                            </legend>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="filter_adaptive" name="grid-group" value="adaptive" checked>
+                                    <label for="filter_adaptive">Адаптиваная</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="filter_fixed" name="grid-group" value="fixed">
+                                    <label for="filter_fixed">Фиксированная</label>
+                                </li>
 
-                        </li>
-                        <li>
-                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="img/img-pink.png" width="360px" height="576" alt="pink">
+                                <li>
+                                    <input type="radio" id="filter_rubber" name="grid-group" value="rubber">
+                                    <label for="filter_rubber">Резинованная</label>
+                                </li>
 
-                        </li>
-                        <li>
-                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="img/img-barbershop.png" width="358" height="578" alt="barbershop">
-                        </li>
-                        <li>
-                            <div class="project-item-controls"></div>
-                            <img src="img/img-mishka.png" width="358" height="578" alt="mishka">
-                        </li>
-                        <li>
-                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="img/img-aplus.png" width="358" height="578" alt="aplus">
-                        </li>
-                        <li>
-                            <div class="project-item-controls"></div> <!--Блок под кнопки точки слайдера-->
-                            <img src="img/img-kvast.png" width="358" height="578" alt="kvast">
-                        </li>
-                    </ul>
-                    <!--Листинг проектов конец-->
-                    <!--Пагинация начало-->
-                    <div class="pagination">
-                        <ul>
-                            <li><a href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                            <li class="next-page"><a href="">Следующая</a></li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="features">
+                            <legend>
+                                Особенности:
+                            </legend>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="filter-slider" name="features">
+                                    <label for="filter-slider">
+                                        Слайдер
+                                    </label>
+
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="filter-benefits" name="features">
+                                    <label for="filter-benefits">
+
+                                        Блок преимуществ
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="filter-news" name="features">
+                                    <label for="filter-news">
+                                        Новости
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="filter-gallery" name="features">
+                                    <label for="filter-gallery">
+                                        Галерея
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="filter-basket" name="features">
+                                    <label for="filter-basket">
+                                        Корзина
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <button type="submit" class="btn-submit btn-grey">Показать</button>
+                    </form>
+                </aside>
+                <section>
+                        <!--Сортировка начало-->
+                        <div class="sort-container">
+                            <h3>Сортировать:</h3>
+                            <ul class="sort-container-inner">
+                                <li><a href="#" class="sort-type sort-by-price active"><span>По цене</span></a></li>
+                                <li><a href="#" class="sort-type sort-by-type"><span>По типу</span></a></li>
+                                <li><a href="#" class="sort-type sort-by-name"><span>По названию</span></a></li>
+                                <li>
+                                    <a href="#" class="sort-btn sort-down">
+                                        <img src="img/icon-down-dir.png" width="11" height="10" alt="Иконка корзины">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sort-btn sort-up">
+                                        <img src="img/icon-up-dir.png" width="11" height="10" alt="Иконка корзины">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Сортировка конец-->
+                        <!--Листинг проектов начало-->
+
+                        <ul class="projects-item-list">
+                            <li class="project-item">
+                                <div class="project-item-controls">
+                                    <ul>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div> <!--Блок под кнопки точки слайдера-->
+                                <img src="img/img-sedona.png" width="360px" height="576" alt="sedona">
+
+                                <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
+                                    <div class="project-item-hover-block-container">
+                                        <a href="">SEDONA</a>
+                                        <p>Информационный сайт для туристов</p>
+                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="project-item">
+                                <div class="project-item-controls">
+                                    <ul>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div> <!--Блок под кнопки точки слайдера-->
+                                <img src="img/img-pink.png" width="360px" height="576" alt="pink">
+                                <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
+                                    <div class="project-item-hover-block-container">
+                                        <a href="">PINK APP</a>
+                                        <p>Продуктовый лендинг приложения для iOS и Android</p>
+                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project-item">
+                                <div class="project-item-controls">
+                                    <ul>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div> <!--Блок под кнопки точки слайдера-->
+                                <img src="img/img-barbershop.png" width="358" height="578" alt="barbershop">
+                                <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
+                                    <div class="project-item-hover-block-container">
+                                        <a href="">BORODINSKI</a>
+                                        <p>Сайт барбершопа</p>
+                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project-item">
+                                <div class="project-item-controls">
+                                    <ul>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                                <img src="img/img-mishka.png" width="358" height="578" alt="mishka">
+                                <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
+                                    <div class="project-item-hover-block-container">
+                                        <a href="">MISHKA</a>
+                                        <p>Сайт ручной работы</p>
+                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project-item">
+                                <div class="project-item-controls">
+                                    <ul>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div> <!--Блок под кнопки точки слайдера-->
+                                <img src="img/img-aplus.png" width="358" height="578" alt="aplus">
+                                <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
+                                    <div class="project-item-hover-block-container">
+                                        <a href="">APLUS</a>
+                                        <p>Сайт обучения</p>
+                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project-item">
+                                <div class="project-item-controls">
+                                    <ul>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div> <!--Блок под кнопки точки слайдера-->
+                                <img src="img/img-kvast.png" width="358" height="578" alt="kvast">
+                                <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
+                                    <div class="project-item-hover-block-container">
+                                        <a href="">KVAST</a>
+                                        <p>Сайт крафтового кваса</p>
+                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
-                    </div>
-                    <!--Пагинация конец-->
-            </section>
+                        <!--Листинг проектов конец-->
+                        <!--Пагинация начало-->
+                        <div class="pagination">
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li class="next-page"><a href="">Следующая</a></li>
+                            </ul>
+                        </div>
+                        <!--Пагинация конец-->
+                </section>
+
         </section>
         <!--Блок карты начало -->
         <section class="sec-map">
