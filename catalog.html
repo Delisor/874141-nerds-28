@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -125,7 +126,7 @@
                                 </li>
                             </ul>
                         </fieldset>
-                        <button type="submit" class="btn-submit btn-grey">Показать</button>
+                        <button type="submit" class="btn-submit btn-grey" title="Показать">Показать</button>
                     </form>
                 </aside>
                 <section>
@@ -166,7 +167,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">SEDONA</a>
                                         <p>Информационный сайт для туристов</p>
-                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
 
@@ -184,7 +185,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">PINK APP</a>
                                         <p>Продуктовый лендинг приложения для iOS и Android</p>
-                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -201,7 +202,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">BORODINSKI</a>
                                         <p>Сайт барбершопа</p>
-                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -218,7 +219,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">MISHKA</a>
                                         <p>Сайт ручной работы</p>
-                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -235,7 +236,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">APLUS</a>
                                         <p>Сайт обучения</p>
-                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -252,7 +253,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">KVAST</a>
                                         <p>Сайт крафтового кваса</p>
-                                        <button class="btn btn-red btn-price" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -277,10 +278,40 @@
             <div class="popup-map">       <!--блок с позицией absolute-->
                 <h3>NЁRDS DESIGN STUDIO</h3>
                 <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7(812)275-75-75</p>
-                <button type="button" class="btn btn-red btn-right-us">Напишите нам</button>
+                <button type="button" title="Напишите нам" class="btn btn-red btn-right-us">Напишите нам</button>
             </div>
         </section>
         <!--Блок карты конец -->
+        <section class="sec-popup">
+            <div class="popup__inner">
+                <div class="popup-header">
+                    <div class="popup-title">
+                        <h2>Напишите нам</h2>
+                    </div>
+                    <div class="popup-close-btn-container">
+                        <button class="modal__close icon-close" type="button" title="Закрыть" data-modal="close"></button>
+                    </div>
+                </div>
+                <form>
+                    <div class="form__group">
+                        <div class="form__group_item">
+                            <label class="form__label">Ваше имя:</label>
+                            <input name="name" class="field field--text " placeholder="Имя Фамилия">
+                        </div>
+                        <div class="form__group_item">
+                            <label class="form__label">Ваш email:</label>
+                            <input name="email" placeholder="email@example.com">
+                        </div>
+                    </div>
+                    <div class="form__group_item">
+                        <label class="form__label">Текст письма:</label>
+                        <textarea name="message" placeholder="В свободной форме"></textarea>
+                    </div>
+                    <button class="btn btn-red btn-submit" type="submit" title="Отправить">Отправить</button>
+                </form>
+            </div>
+
+        </section>
     </main>
     <footer>
         <div class="page-footer__inner">

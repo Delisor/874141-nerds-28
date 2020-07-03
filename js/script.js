@@ -24,3 +24,13 @@ ymaps.ready(function () {
     myMap.geoObjects.add(myPlacemark)
 
 });
+
+$( document ).ready(function() {
+    $( ".btn-right-us" ).click(function() {
+        $(".sec-popup").show();
+    });
+
+    $( ".modal__close" ).click(function() {
+        $(".sec-popup").hide();
+    });
+})
