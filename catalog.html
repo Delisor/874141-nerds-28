@@ -3,22 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div class="page-header">
-            <h1 class="sr-only">NЁRDS DESIGN STUDIO</h1>
-            <nav class="page-header__inner">
-                <a href="/">
+            <nav>
+                <a href="index.html">
                     <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс Магазин готовых шаблонов">
                 </a>
-
                 <ul class="site-menu">
                     <li><a href="">Студия</a></li>
                     <li><a href="">Клиенты</a></li>
@@ -29,7 +23,6 @@
                     <li><a href=""><img src="img/svg/cart-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a></li>
                 </ul>
             </nav>
-        </div>
     </header>
     <main>
         <!--Блок заголвок страницы начало -->
@@ -39,10 +32,9 @@
         <!--Блок заголвок страницы конец -->
 
         <section class="sec-main-part">
-
+            <h2 class="sr-only">Основная часть</h2>
                 <aside>
-                    <form action="https:://echo.htmlacademy.ru" method="get">
-
+                    <form action="/" method="get">
                         <fieldset class="filter-price">
                             <legend>
                                 Стоимость:
@@ -56,11 +48,11 @@
                                     <div class="toggle toggle-max" tabindex="0"></div>
                                 </div>
                                     <div class="price-controls">
-                                        <label class="min-price">
-                                            от   <input type="number" name="min_price">
+                                        <label for="from-field" class="min-price">
+                                            от   <input type="number" id="from-field" name="min_price">
                                         </label>
-                                        <label class="max-price">
-                                            до  <input type="number" name="max_price">
+                                        <label for="to-field" class="max-price">
+                                            до  <input type="number" id="to-field" name="max_price">
                                         </label>
 
                                     </div>
@@ -126,7 +118,7 @@
                                 </li>
                             </ul>
                         </fieldset>
-                        <button type="submit" class="btn-submit btn-grey" title="Показать">Показать</button>
+                        <button type="submit" class="btn-submit btn-grey" aria-label="Показать">Показать</button>
                     </form>
                 </aside>
                 <section>
@@ -161,13 +153,13 @@
                                         <li><a href="#"></a></li>
                                     </ul>
                                 </div> <!--Блок под кнопки точки слайдера-->
-                                <img src="img/img-sedona.png" width="360px" height="576" alt="sedona">
+                                <img src="img/img-sedona.png" width="360" height="576" alt="sedona">
 
                                 <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
                                     <div class="project-item-hover-block-container">
                                         <a href="">SEDONA</a>
                                         <p>Информационный сайт для туристов</p>
-                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" aria-label="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
 
@@ -180,12 +172,12 @@
                                         <li><a href="#"></a></li>
                                     </ul>
                                 </div> <!--Блок под кнопки точки слайдера-->
-                                <img src="img/img-pink.png" width="360px" height="576" alt="pink">
+                                <img src="img/img-pink.png" width="360" height="576" alt="pink">
                                 <div class="project-item-hover-block">       <!--Блок с дисплей = None -->
                                     <div class="project-item-hover-block-container">
                                         <a href="">PINK APP</a>
                                         <p>Продуктовый лендинг приложения для iOS и Android</p>
-                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" aria-label="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -202,7 +194,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">BORODINSKI</a>
                                         <p>Сайт барбершопа</p>
-                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" aria-label="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -219,7 +211,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">MISHKA</a>
                                         <p>Сайт ручной работы</p>
-                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" aria-label="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -236,7 +228,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">APLUS</a>
                                         <p>Сайт обучения</p>
-                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" aria-label="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -253,7 +245,7 @@
                                     <div class="project-item-hover-block-container">
                                         <a href="">KVAST</a>
                                         <p>Сайт крафтового кваса</p>
-                                        <button class="btn btn-red btn-price" title="Цена" type="button">9900 &#x20BD;</button>
+                                        <button class="btn btn-red btn-price" aria-label="Цена" type="button">9900 &#x20BD;</button>
                                     </div>
                                 </div>
                             </li>
@@ -277,69 +269,69 @@
             <div id="YMapsID" class="map-conteiner"></div> <!--фрейм карты-->
             <div class="popup-map">       <!--блок с позицией absolute-->
                 <h3>NЁRDS DESIGN STUDIO</h3>
-                <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7(812)275-75-75</p>
-                <button type="button" title="Напишите нам" class="btn btn-red btn-right-us">Напишите нам</button>
+                <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<a href="tel:+7(812)2757575">тел. +7(812)275-75-75</a></p>
+                <button type="button" aria-label="Напишите нам" onclick="showPopup()" class="btn btn-red btn-right-us">Напишите нам</button>
             </div>
         </section>
         <!--Блок карты конец -->
-        <section class="sec-popup">
+        <section class="sec-popup catalog">
             <div class="popup__inner">
                 <div class="popup-header">
                     <div class="popup-title">
                         <h2>Напишите нам</h2>
                     </div>
                     <div class="popup-close-btn-container">
-                        <button class="modal__close icon-close" type="button" title="Закрыть" data-modal="close"></button>
+                        <button class="modal__close icon-close" type="button" aria-label="Закрыть" data-modal="close" onclick="closePopup()"></button>
                     </div>
                 </div>
                 <form>
                     <div class="form__group">
                         <div class="form__group_item">
-                            <label class="form__label">Ваше имя:</label>
-                            <input name="name" class="field field--text " placeholder="Имя Фамилия">
+                            <label for="form_name_field" class="form__label">Ваше имя:</label>
+                            <input name="name" id="form_name_field" class="field field--text " placeholder="Имя Фамилия">
                         </div>
                         <div class="form__group_item">
-                            <label class="form__label">Ваш email:</label>
-                            <input name="email" placeholder="email@example.com">
+                            <label for="form_email_field" class="form__label">Ваш email:</label>
+                            <input name="email" id="form_email_field" placeholder="email@example.com">
                         </div>
                     </div>
                     <div class="form__group_item">
-                        <label class="form__label">Текст письма:</label>
-                        <textarea name="message" placeholder="В свободной форме"></textarea>
+                        <label for="form_message_field" class="form__label">Текст письма:</label>
+                        <textarea name="message" id="form_message_field" placeholder="В свободной форме"></textarea>
                     </div>
-                    <button class="btn btn-red btn-submit" type="submit" title="Отправить">Отправить</button>
+                    <button class="btn btn-red btn-submit" type="submit" aria-label="Отправить">Отправить</button>
                 </form>
             </div>
 
         </section>
     </main>
     <footer>
-        <div class="page-footer__inner">
-            <ul>
-                <li>
-                    <a href="" target="_blank" title="vk" class="vk-icon">
-                        <span class="sr-only">Наша страница в&nbsp;Vk</span>
-                        <img src="img/vk-icon.png" width="26" height="15" alt="vkontakte">
-                    </a>
-                </li>
-                <li>
-                    <a href="" target="_blank" title="facebook" class="fb-icon">
-                        <span class="sr-only">Наша страница в&nbsp;Facebook</span>
-                        <img src="img/fb-icon.png" width="12" height="22" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="" target="_blank" title="Instagram" class="insta-icon">
-                        <span class="sr-only">Наша страница в&nbsp;Instagram</span>
-                        <img src="img/insta-icon.png" width="21" height="21" alt="instagram">
-                    </a>
-                </li>
-            </ul>
-            <div class="page-footer__inner_text">
-                <h2>Давайте дружить, это выгодно</h2>
-                <p>Скидка 10% для друзей из социальных сетей</p>
-            </div>
+        <ul>
+            <li>
+                <a href="" target="_blank" title="vk" class="vk-icon">
+                    <span class="sr-only">Наша страница в&nbsp;Vk</span>
+                    <img src="img/vk-icon.png" width="26" height="15" alt="vkontakte">
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank" title="facebook" class="fb-icon">
+                    <span class="sr-only">Наша страница в&nbsp;Facebook</span>
+                    <img src="img/fb-icon.png" width="12" height="22" alt="facebook">
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank" title="Instagram" class="insta-icon">
+                    <span class="sr-only">Наша страница в&nbsp;Instagram</span>
+                    <img src="img/insta-icon.png" width="21" height="21" alt="instagram">
+                </a>
+            </li>
+        </ul>
+        <div class="page-footer__inner_text">
+            <h2>Давайте дружить, это выгодно</h2>
+            <p>Скидка 10% для друзей из социальных сетей</p>
         </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU"></script>
+    <script src="js/script.js" defer="defer"></script>
 </body>
 </html>
