@@ -19,11 +19,7 @@
 }
 /*Fonts END*/
 
-
-
-
 /*Common*/
-
 :root {
     --basic-black: #000000;
     --basic-white: #ffffff;
@@ -38,8 +34,6 @@
     --basic-yellow-three: #E5A722;
     --basic-e: #EEEEEE;
 }
-
-
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -727,8 +721,6 @@ footer ul li a {
 }
 /*Footer END*/
 
-
-
 /*Head title*/
 .sec-head-title{
     background-color: #EEEEEE;
@@ -937,8 +929,6 @@ footer ul li a {
 .sort-container ul li .sort-by-name{
     margin-right: 38px;
 }
-
-
 
 .pagination ul {
     padding: 0;
