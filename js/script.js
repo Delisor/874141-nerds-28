@@ -33,6 +33,22 @@ function showPopup() {
     document.querySelector('.sec-popup').style.display = "block";
 }
 
+function ValidateForm(mail)
+{
+    let mail_input = document.querySelector("input[name=email]");
+
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(mail_input.value.match(mailformat))
+    {
+        mail_input.classList.remove('invalid');
+    }else{
+
+        mail_input.classList.add('invalid');
+        event.preventDefault();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     let listItems = document.querySelectorAll('.slide-switcher li');
 

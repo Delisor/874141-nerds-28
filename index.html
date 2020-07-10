@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title>HTML Academy: Нёрдс</title>
         <link rel="stylesheet" href="css/normalize.css">
-        <!--<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -153,7 +152,8 @@
                 <div id="YMapsID" class="map-conteiner"></div> <!--фрейм карты-->
                 <div class="popup-map">       <!--блок с позицией absolute-->
                     <h3>NЁRDS DESIGN STUDIO</h3>
-                    <p>191186, Санкт-Петербург,<br /> ул. Б. Конюшенная, д. 19/8<br /><a href="tel:+7(812)2757575">тел. +7(812)275-75-75</a></p>
+                    <p>191186, Санкт-Петербург,<br /> ул. Б. Конюшенная, д. 19/8</p>
+                    <a href="tel:+7(812)2757575">тел. +7 (812) 275-75-75</a>
                     <button type="button" aria-label="Напишите нам" class="btn btn-red btn-right-us" onclick="showPopup()">Напишите нам</button>
                 </div>
             </section>
@@ -183,7 +183,7 @@
                             <label for="form_message_field" class="form__label">Текст письма:</label>
                             <textarea name="message" id="form_message_field" placeholder="В свободной форме"></textarea>
                         </div>
-                        <button class="btn btn-red btn-submit" type="submit" aria-label="Отправить">Отправить</button>
+                        <button class="btn btn-red btn-submit" type="submit" onclick="ValidateForm()" aria-label="Отправить">Отправить</button>
                     </form>
                 </div>
 
