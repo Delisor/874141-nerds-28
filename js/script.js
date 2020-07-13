@@ -1,5 +1,5 @@
 ymaps.ready(function () {
-    var myMap = new ymaps.Map("YMapsID", {
+    var myMap = new ymaps.Map('YMapsID', {
         center: [55.76, 37.64],
         zoom: 10
     });
@@ -26,16 +26,16 @@ ymaps.ready(function () {
 });
 
 function closePopup() {
-    document.querySelector('.sec-popup').style.display = "none";
+    document.querySelector('.sec-popup').style.display = 'none';
 }
 
 function showPopup() {
-    document.querySelector('.sec-popup').style.display = "block";
+    document.querySelector('.sec-popup').style.display = 'block';
 }
 
 function ValidateForm(mail)
 {
-    let mail_input = document.querySelector("input[name=email]");
+    let mail_input = document.querySelector('input[name=email]');
 
     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -65,32 +65,30 @@ document.addEventListener('DOMContentLoaded', function(){
 
             item.classList.add('selected');
 
-
-            if(item.classList.contains("slide1")) {
-                if(slider1.classList.contains("hide")){
+            if(item.classList.contains('slide1')) {
+                if(slider1.classList.contains('hide')){
                     slider1.classList.remove('hide');
                 }
                 slider2.classList.add('hide');
                 slider3.classList.add('hide');
             }
 
-            if(item.classList.contains("slide2")) {
+            if(item.classList.contains('slide2')) {
                 console.log('2');
-                if(slider2.classList.contains("hide")){
+                if(slider2.classList.contains('hide')){
                     slider2.classList.remove('hide');
                 }
                 slider1.classList.add('hide');
                 slider3.classList.add('hide');
             }
 
-            if(item.classList.contains("slide3")) {
-                if(slider3.classList.contains("hide")){
+            if(item.classList.contains('slide3')) {
+                if(slider3.classList.contains('hide')){
                     slider3.classList.remove('hide');
                 }
                 slider1.classList.add('hide');
                 slider2.classList.add('hide');
             }
-
         });
 
     });

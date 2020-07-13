@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header>
+    <header class="page-header">
             <nav>
-                <a href="index.html">
+                <a class="page-header__logo" href="index.html">
                     <img src="img/svg/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс Магазин готовых шаблонов">
                 </a>
                 <ul class="site-menu">
@@ -39,7 +39,7 @@
                                 Стоимость:
                             </legend>
                             <div class="range-filter">
-                                <div class="range-contols">
+                                <div class="range-controls">
                                     <div class="scale">
                                         <div class="bar"></div>
                                     </div>
@@ -53,7 +53,6 @@
                                         <label for="to-field" class="max-price">
                                             до  <input type="number" id="to-field" name="max_price">
                                         </label>
-
                                     </div>
                             </div>
                         </fieldset>
@@ -265,21 +264,19 @@
         </section>
         <!--Блок карты начало -->
         <section class="sec-map">
-            <div id="YMapsID" class="map-conteiner"></div> <!--фрейм карты-->
+            <div id="YMapsID" class="map-container"></div> <!--фрейм карты-->
             <div class="popup-map">       <!--блок с позицией absolute-->
                 <h3>NЁRDS DESIGN STUDIO</h3>
                 <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                <a href="tel:+7(812)2757575">тел. +7 (812) 275-75-75</a>
-                <button type="button" aria-label="Напишите нам" onclick="showPopup()" class="btn btn-red btn-right-us">Напишите нам</button>
+                <a class="call-us" href="tel:+7(812)2757575">тел. +7 (812) 275-75-75</a>
+                <a type="button" aria-label="Напишите нам" onclick="showPopup()" class="btn btn-red btn-right-us btn-link">Напишите нам</a>
             </div>
         </section>
         <!--Блок карты конец -->
         <section class="sec-popup catalog">
             <div class="popup__inner">
                 <div class="popup-header">
-                    <div class="popup-title">
-                        <h2>Напишите нам</h2>
-                    </div>
+                    <h2>Напишите нам</h2>
                     <div class="popup-close-btn-container">
                         <button class="modal__close icon-close" type="button" aria-label="Закрыть" data-modal="close" onclick="closePopup()"></button>
                     </div>
@@ -304,7 +301,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="page-footer">
         <ul>
             <li>
                 <a href="" target="_blank" title="vk" class="vk-icon">
@@ -331,6 +328,6 @@
         </div>
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=421859a3-2eac-498c-969b-a181e2cbf312&lang=ru_RU"></script>
-    <script src="js/script.js" defer="defer"></script>
+    <script src="js/script.min.js" defer="defer"></script>
 </body>
 </html>
