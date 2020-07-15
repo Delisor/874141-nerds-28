@@ -141,8 +141,16 @@ body{
     width: 438px;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 27px;
+    margin-bottom: 9px;
+    padding: 0;
 }
 
+.page-header .basket-block{
+    margin-top: 27px;
+    margin-bottom: 9px;
+    padding: 0;
+}
 .basket-block li a img{
     margin-right: 25px;
 }
@@ -439,14 +447,13 @@ body{
     margin: 0 auto;
     width: 88px;
     padding: 0;
-    justify-content: space-between;
     margin-top: -96px;
-}
-.slide-switcher{
     list-style: none;
     flex-direction: row;
     display: flex;
+    justify-content: space-between;
 }
+
 .slide-switcher li{
     position: relative;
     height: 18px;
@@ -1093,6 +1100,9 @@ footer .page-footer__inner_text{
 .price-controls input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+.price-controls input {
+    -moz-appearance:textfield;
 }
 
 .choose-grid{
