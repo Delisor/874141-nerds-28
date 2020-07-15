@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -23,7 +24,7 @@
                 </ul>
             </nav>
     </header>
-    <main>
+    <main class="main-container">
         <!--Блок заголвок страницы начало -->
         <section class="sec-head-title">
             <h1>Магазин готовых шаблонов</h1>
@@ -43,8 +44,12 @@
                                     <div class="scale">
                                         <div class="bar"></div>
                                     </div>
-                                    <div class="toggle toggle-min" tabindex="0"></div>
-                                    <div class="toggle toggle-max" tabindex="0"></div>
+                                    <div class="toggle toggle-min" tabindex="0">
+                                        <span class="sr-only">Минимум</span>
+                                    </div>
+                                    <div class="toggle toggle-max" tabindex="0">
+                                        <span class="sr-only">Максимум</span>
+                                    </div>
                                 </div>
                                     <div class="price-controls">
                                         <label for="from-field" class="min-price">
@@ -72,7 +77,7 @@
 
                                 <li>
                                     <input type="radio" id="filter_rubber" name="grid-group" value="rubber">
-                                    <label for="filter_rubber">Резинованная</label>
+                                    <label for="filter_rubber">Резиновая</label>
                                 </li>
 
                             </ul>
@@ -124,16 +129,28 @@
                         <div class="sort-container">
                             <h3>Сортировать:</h3>
                             <ul class="sort-container-inner">
-                                <li><a href="#" class="sort-type sort-by-price active"><span>По цене</span></a></li>
-                                <li><a href="#" class="sort-type sort-by-type"><span>По типу</span></a></li>
-                                <li><a href="#" class="sort-type sort-by-name"><span>По названию</span></a></li>
-                                <li>
-                                    <a href="#" class="sort-btn sort-down">
+                                <li class="sort-by-price">
+                                    <a href="#" class="sort-type active">
+                                        <span>По цене</span>
+                                    </a>
+                                </li>
+                                <li class="sort-by-type">
+                                    <a href="#" class="sort-type">
+                                        <span>По типу</span>
+                                    </a>
+                                </li>
+                                <li class="sort-by-name">
+                                    <a href="#" class="sort-type">
+                                        <span>По названию</span>
+                                    </a>
+                                </li>
+                                <li class="sort-down">
+                                    <a href="#" class="sort-btn">
                                         <img src="img/icon-down-dir.png" width="11" height="10" alt="Иконка корзины">
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="sort-btn sort-up">
+                                <li class="sort-up">
+                                    <a href="#" class="sort-btn">
                                         <img src="img/icon-up-dir.png" width="11" height="10" alt="Иконка корзины">
                                     </a>
                                 </li>
@@ -267,7 +284,7 @@
             <div id="YMapsID" class="map-container"></div> <!--фрейм карты-->
             <div class="popup-map">       <!--блок с позицией absolute-->
                 <h3>NЁRDS DESIGN STUDIO</h3>
-                <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
                 <a class="call-us" href="tel:+7(812)2757575">тел. +7 (812) 275-75-75</a>
                 <a type="button" onclick="showPopup()" class="btn btn-red btn-right-us btn-link">Напишите нам</a>
             </div>
@@ -323,7 +340,7 @@
             </li>
         </ul>
         <div class="page-footer__inner_text">
-            <h2>Давайте дружить, это выгодно</h2>
+            <h2>Давайте дружить, это выгодно!</h2>
             <p>Скидка 10% для друзей из социальных сетей</p>
         </div>
     </footer>

@@ -126,8 +126,8 @@ body{
     color: var(--basic-black);
     font-weight: bold;
 }
-.page-header ul li a.active{
-    padding-bottom: 13px;
+.page-header ul li .active{
+    padding-bottom: 18px;
     border-bottom: 2px solid var(--basic-red-one);
 }
 .page-header ul li a:hover{
@@ -139,11 +139,13 @@ body{
 }
 .page-header nav .site-menu{
     width: 438px;
+    margin-right: 42px;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 27px;
     margin-bottom: 9px;
     padding: 0;
+    z-index: 99;
 }
 
 .page-header .basket-block{
@@ -194,14 +196,15 @@ body{
     margin-bottom: 16px;
 }
 .sec-our-services ul li p{
-
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 32px;
 }
 .apps:before{
-    background-image: url(../img/illustration-3.png);
+    background-image: url(../img/illustration-2.png);
 }
 .presentations:before{
-    background-image: url(../img/illustration-2.png);
+    background-image: url(../img/illustration-3.png);
 }
 .web-sites:before{
     background-image: url(../img/illustration-1.png);
@@ -293,7 +296,7 @@ body{
     padding-left: 172px;
     padding-right: 183px;
     padding-top: 46px;
-    padding-bottom: 44px;
+    padding-bottom: 41px;
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
@@ -323,6 +326,7 @@ body{
     height: 52px;
     background-color: var(--basic-e);
 }
+
 /*Projects-links END*/
 
 /*What we are*/
@@ -332,7 +336,7 @@ body{
     padding-left: 140px;
     padding-right: 126px;
     padding-top: 39px;
-    padding-bottom: 73px;
+    padding-bottom: 43px;
     justify-content: space-between;
     max-width: 1440px;
     margin: 0 auto;
@@ -342,6 +346,8 @@ body{
     width: 374px;
 }
 .right-block-info ul{
+    margin-top:28px;
+    width: 369px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -363,20 +369,26 @@ body{
     line-height: 18px;
     color: var(--basic-another-text-color);
     font-size: 16px;
+    display: inline-block;
+    margin-top: 13px;
 }
 .right-block-info p {
-    margin-top: 37px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 34px;
     color: var(--basic-black);
     font-size: 16px;
     line-height: 24px;
     font-weight: bold;
-    padding-left: 7px;
+    padding-left: 17px;
 }
 .left-block-info h3{
+    text-transform: uppercase;
     margin-bottom: 23px;
+    font-size: 16px;
+    line-height: 24px;
 }
 .left-block-info ul{
-    max-width: 431px;
     padding: 0;
 }
 .left-block-info ul li {
@@ -384,13 +396,14 @@ body{
     padding-left: 37px;
     list-style: none;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 .left-block-info h2{
     font-weight: 500;
     font-size: 45px;
     line-height: 45px;
     margin-bottom: 32px;
+    margin-top: 33px;
     width: 651px;
     height: 91px;
 }
@@ -405,6 +418,10 @@ body{
 /*What we are END*/
 
 /*Main banner*/
+
+.main-container{
+    margin-top: -4px;
+}
 .sec-main-banner{
     min-height: 431px;
     height: auto;
@@ -438,16 +455,16 @@ body{
 }
 .main-slider .start-home__message p{
     font-size: 16px;
-    line-height: 24px;
+    line-height: 25px;
     margin: 0;
     margin-top: 25px;
-    margin-bottom: 38px;
+    margin-bottom: 39px;
 }
 .slide-switcher{
     margin: 0 auto;
     width: 88px;
     padding: 0;
-    margin-top: -96px;
+    margin-top: -114px;
     list-style: none;
     flex-direction: row;
     display: flex;
@@ -480,12 +497,15 @@ body{
     height: 416px;
 }
 .sec-map {
-    margin-top: 80px;
+    margin-top: 61px;
     position: relative;
+}
+.sec-map.additional {
+    margin-top: 80px;
 }
 .popup-map {
     top: 54px;
-    left: 140px;
+    left: 211px;
     position: absolute;
     width: 319px;
     height: 308px;
@@ -509,7 +529,7 @@ body{
     margin-bottom: 19px;
 }
 .popup-map .call-us{
-    margin-bottom: 37px;
+    margin-bottom: 36px;
     display: inline-block;
     text-decoration: none;
     color: var(--basic-popup-text-color);
@@ -685,13 +705,20 @@ body{
 
 footer .page-footer__inner_text{
     max-width: 660px;
+    padding-right: 116px;
+    padding-top: 6px;
 }
 
 .page-footer__inner_text h2{
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     margin-top: 0;
+}
+
+.page-footer__inner_text p{
+    margin: 0;
+    padding: 0;
 }
 
 .page-footer  ul{
@@ -749,13 +776,13 @@ footer .page-footer__inner_text{
     margin: 0;
     font-size: 55px;
     line-height: 55px;
+    margin-right: 15px;
 }
 /*Head title END*/
 
 /*Catalog main part*/
 .sec-main-part{
-    width: 100%;
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
     padding-right: 140px;
     padding-left: 140px;
@@ -770,7 +797,7 @@ footer .page-footer__inner_text{
     -o-flex-direction: row;
     flex-direction: row;
     flex-direction: row;
-    padding-bottom: 60px;
+    padding-bottom: 0;
 }
 
 .sec-main-part aside{
@@ -779,8 +806,7 @@ footer .page-footer__inner_text{
     height: 100%;
 }
 .sec-main-part section{
-    max-width: 760px;
-    width: 100%;
+    width: 760px;
     margin-left: 140px ;
 }
 
@@ -896,6 +922,7 @@ footer .page-footer__inner_text{
 }
 
 .sort-container-inner{
+    width: 360px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -909,13 +936,6 @@ footer .page-footer__inner_text{
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
-}
-
-.sort-container ul li .sort-down{
-    padding: 9px;
-}
-.sort-container ul li .sort-up{
-    padding: 9px;
 }
 
 .sort-container ul li .sort-type {
@@ -947,19 +967,24 @@ footer .page-footer__inner_text{
     opacity: 1;
 }
 
-.sort-container ul li .sort-by-price{
-    margin-right: 25px;
+.sort-container-inner .sort-by-price{
+    margin-right: 27px;
 }
 
-.sort-container ul li .sort-by-type{
+.sort-container-inner .sort-by-type{
     margin-right: 26px;
 }
-.sort-container ul li .sort-by-name{
-    margin-right: 38px;
+.sort-container-inner .sort-by-name{
+    margin-right: 45px;
+}
+.sort-container-inner .sort-down{
+    margin-right: 18px
 }
 
 
-
+.pagination{
+    margin-top: 20px;
+}
 
 .pagination ul {
     padding: 0;
@@ -1053,6 +1078,7 @@ footer .page-footer__inner_text{
     width: 70%;
 }
 .range-controls .toggle{
+    box-sizing: content-box;
     position: absolute;
     top: 31px;
     left: 0;
@@ -1067,7 +1093,7 @@ footer .page-footer__inner_text{
 
 }
 .range-controls .toggle-min {
-    left: 10px;
+    left: 19px;
 }
 .range-controls .toggle-max{
     left: 160px;
@@ -1124,7 +1150,7 @@ footer .page-footer__inner_text{
     padding-left: 0;
 }
 .choose-grid ul li:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 .choose-grid ul li label {
     display: inline-block;
